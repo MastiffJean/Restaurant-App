@@ -1,0 +1,15 @@
+C:\Users\Masti\source\repos\Course Project .NET\Res_App\Res_Kitchen\Kitchen_DVS\bin\Debug\Kitchen_DVS.exe.config
+C:\Users\Masti\source\repos\Course Project .NET\Res_App\Res_Kitchen\Kitchen_DVS\bin\Debug\Kitchen_DVS.exe
+C:\Users\Masti\source\repos\Course Project .NET\Res_App\Res_Kitchen\Kitchen_DVS\bin\Debug\Kitchen_DVS.pdb
+C:\Users\Masti\source\repos\Course Project .NET\Res_App\Res_Kitchen\Kitchen_DVS\obj\Debug\Kitchen_DVS.csprojResolveAssemblyReference.cache
+C:\Users\Masti\source\repos\Course Project .NET\Res_App\Res_Kitchen\Kitchen_DVS\obj\Debug\MainWindow.g.cs
+C:\Users\Masti\source\repos\Course Project .NET\Res_App\Res_Kitchen\Kitchen_DVS\obj\Debug\App.g.cs
+C:\Users\Masti\source\repos\Course Project .NET\Res_App\Res_Kitchen\Kitchen_DVS\obj\Debug\Kitchen_DVS_MarkupCompile.cache
+C:\Users\Masti\source\repos\Course Project .NET\Res_App\Res_Kitchen\Kitchen_DVS\obj\Debug\Kitchen_DVS_MarkupCompile.lref
+C:\Users\Masti\source\repos\Course Project .NET\Res_App\Res_Kitchen\Kitchen_DVS\obj\Debug\MainWindow.baml
+C:\Users\Masti\source\repos\Course Project .NET\Res_App\Res_Kitchen\Kitchen_DVS\obj\Debug\Kitchen_DVS.g.resources
+C:\Users\Masti\source\repos\Course Project .NET\Res_App\Res_Kitchen\Kitchen_DVS\obj\Debug\Kitchen_DVS.Properties.Resources.resources
+C:\Users\Masti\source\repos\Course Project .NET\Res_App\Res_Kitchen\Kitchen_DVS\obj\Debug\Kitchen_DVS.csproj.GenerateResource.Cache
+C:\Users\Masti\source\repos\Course Project .NET\Res_App\Res_Kitchen\Kitchen_DVS\obj\Debug\Kitchen_DVS.csproj.CoreCompileInputs.cache
+C:\Users\Masti\source\repos\Course Project .NET\Res_App\Res_Kitchen\Kitchen_DVS\obj\Debug\Kitchen_DVS.exe
+C:\Users\Masti\source\repos\Course Project .NET\Res_App\Res_Kitchen\Kitchen_DVS\obj\Debug\Kitchen_DVS.pdb

@@ -1,0 +1,15 @@
+C:\Users\Masti\source\repos\Course Project .NET\Res_App\Res_Kitchen\Kitchen_Main\bin\Debug\Kitchen_Main.exe.config
+C:\Users\Masti\source\repos\Course Project .NET\Res_App\Res_Kitchen\Kitchen_Main\bin\Debug\Kitchen_Main.exe
+C:\Users\Masti\source\repos\Course Project .NET\Res_App\Res_Kitchen\Kitchen_Main\bin\Debug\Kitchen_Main.pdb
+C:\Users\Masti\source\repos\Course Project .NET\Res_App\Res_Kitchen\Kitchen_Main\obj\Debug\MainWindow.g.cs
+C:\Users\Masti\source\repos\Course Project .NET\Res_App\Res_Kitchen\Kitchen_Main\obj\Debug\App.g.cs
+C:\Users\Masti\source\repos\Course Project .NET\Res_App\Res_Kitchen\Kitchen_Main\obj\Debug\Kitchen_Main_MarkupCompile.cache
+C:\Users\Masti\source\repos\Course Project .NET\Res_App\Res_Kitchen\Kitchen_Main\obj\Debug\Kitchen_Main_MarkupCompile.lref
+C:\Users\Masti\source\repos\Course Project .NET\Res_App\Res_Kitchen\Kitchen_Main\obj\Debug\MainWindow.baml
+C:\Users\Masti\source\repos\Course Project .NET\Res_App\Res_Kitchen\Kitchen_Main\obj\Debug\Kitchen_Main.g.resources
+C:\Users\Masti\source\repos\Course Project .NET\Res_App\Res_Kitchen\Kitchen_Main\obj\Debug\Kitchen_Main.Properties.Resources.resources
+C:\Users\Masti\source\repos\Course Project .NET\Res_App\Res_Kitchen\Kitchen_Main\obj\Debug\Kitchen_Main.csproj.GenerateResource.Cache
+C:\Users\Masti\source\repos\Course Project .NET\Res_App\Res_Kitchen\Kitchen_Main\obj\Debug\Kitchen_Main.csproj.CoreCompileInputs.cache
+C:\Users\Masti\source\repos\Course Project .NET\Res_App\Res_Kitchen\Kitchen_Main\obj\Debug\Kitchen_Main.exe
+C:\Users\Masti\source\repos\Course Project .NET\Res_App\Res_Kitchen\Kitchen_Main\obj\Debug\Kitchen_Main.pdb
+C:\Users\Masti\source\repos\Course Project .NET\Res_App\Res_Kitchen\Kitchen_Main\obj\Debug\Kitchen_Main.csprojResolveAssemblyReference.cache

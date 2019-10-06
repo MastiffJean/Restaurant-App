@@ -1,0 +1,16 @@
+C:\Users\Masti\source\repos\Course Project .NET\Res_App\Res_Service\Service\bin\Debug\Service.exe.config
+C:\Users\Masti\source\repos\Course Project .NET\Res_App\Res_Service\Service\bin\Debug\Service.exe
+C:\Users\Masti\source\repos\Course Project .NET\Res_App\Res_Service\Service\bin\Debug\Service.pdb
+C:\Users\Masti\source\repos\Course Project .NET\Res_App\Res_Service\Service\bin\Debug\DataLayer.dll
+C:\Users\Masti\source\repos\Course Project .NET\Res_App\Res_Service\Service\bin\Debug\EntityFramework.dll
+C:\Users\Masti\source\repos\Course Project .NET\Res_App\Res_Service\Service\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Masti\source\repos\Course Project .NET\Res_App\Res_Service\Service\bin\Debug\DataLayer.pdb
+C:\Users\Masti\source\repos\Course Project .NET\Res_App\Res_Service\Service\bin\Debug\DataLayer.dll.config
+C:\Users\Masti\source\repos\Course Project .NET\Res_App\Res_Service\Service\bin\Debug\EntityFramework.xml
+C:\Users\Masti\source\repos\Course Project .NET\Res_App\Res_Service\Service\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Masti\source\repos\Course Project .NET\Res_App\Res_Service\Service\bin\Debug\ru\EntityFramework.resources.dll
+C:\Users\Masti\source\repos\Course Project .NET\Res_App\Res_Service\Service\bin\Debug\ru\EntityFramework.SqlServer.resources.dll
+C:\Users\Masti\source\repos\Course Project .NET\Res_App\Res_Service\Service\obj\Debug\Service.csprojResolveAssemblyReference.cache
+C:\Users\Masti\source\repos\Course Project .NET\Res_App\Res_Service\Service\obj\Debug\Service.csproj.CoreCompileInputs.cache
+C:\Users\Masti\source\repos\Course Project .NET\Res_App\Res_Service\Service\obj\Debug\Service.exe
+C:\Users\Masti\source\repos\Course Project .NET\Res_App\Res_Service\Service\obj\Debug\Service.pdb

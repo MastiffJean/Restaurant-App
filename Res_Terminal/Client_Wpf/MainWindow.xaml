@@ -1,0 +1,336 @@
+﻿<Window x:Class="Client_Wpf.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Client_Wpf"
+        mc:Ignorable="d"
+        Title="Terminal" Height="768" Width="1024" Loaded="Window_Loaded" Closing="Window_Closing">
+    <Window.Resources>
+        <Style x:Key="GoodBtnsStyle">
+            <Setter Property="Control.Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Grid>
+                            <Rectangle Fill="DarkRed" RadiusX="15" RadiusY="15" x:Name="GoodBtns">
+                                <Rectangle.Effect>
+                                    <DropShadowEffect Color="Black" BlurRadius="10" ShadowDepth="0"/>
+                                </Rectangle.Effect>
+                            </Rectangle>
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Fill" Value="Brown" TargetName="GoodBtns"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter Property="Fill" Value="IndianRed" TargetName="GoodBtns"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    <Grid Background="LightGray">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100*"/>
+            <ColumnDefinition Width="300*"/>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="160*"/>
+                <RowDefinition Height="5*"/>
+                <RowDefinition Height="130*"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0" Background="White">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="25*"/>
+                    <RowDefinition Height="350*"/>
+                    <RowDefinition Height="25*"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0">
+                    <TextBlock Name="tCount" Text="Count" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                </Grid>
+                <Grid Grid.Row="1">
+                    <ListBox Name="CurrentOrder" Grid.Row="1" HorizontalContentAlignment="Stretch" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.RowSpan="2" SelectionChanged="CurrentOrder_SelectionChanged">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <Grid>
+                                    <TextBlock Text="{Binding Path=Name}" HorizontalAlignment="Left"/>
+                                    <TextBlock Text="{Binding Path=Price}" HorizontalAlignment="Right"/>
+                                </Grid>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                </Grid>
+                <Grid Grid.Row="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="70*"/>
+                        <ColumnDefinition Width="30*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Text="Total:" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                    <TextBlock Name="CurrentOrderPrice" Text="Price" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                </Grid>
+            </Grid>
+            <Grid Grid.Row="2" Background="White">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="199*"/>
+                    <ColumnDefinition Width="55*"/>
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Column="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="25*"/>
+                        <RowDefinition Height="308*"/>
+                    </Grid.RowDefinitions>
+                    <Grid Grid.Row="0">
+                        <TextBox Name="TypeOrder" Text="Type"/>
+                    </Grid>
+                    <Grid Grid.Row="1">
+                        <ListBox Name="PrevOrdersItem" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Column="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="30*"/>
+                        <RowDefinition Height="20*"/>
+                        <RowDefinition Height="30*"/>
+                        <RowDefinition Height="100*"/>
+                    </Grid.RowDefinitions>
+                    <Button Name="bNextOrder" Grid.Row="0" Content="&gt;" FontSize="25" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="bNextOrder_Click"/>
+                    <Grid Grid.Row="1">
+                        <ItemsControl VerticalAlignment="Center" HorizontalAlignment="Center">
+                            <ItemsControl.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <UniformGrid Columns="3"/>
+                                </ItemsPanelTemplate>
+                            </ItemsControl.ItemsPanel>
+                            <TextBlock Name="numOfPrevOrd" Text="n" Margin="2"/>
+                            <TextBlock Text="/" Margin="2"/>
+                            <TextBlock Name="countOfPrevOrd" Text="a" Margin="2"/>
+                        </ItemsControl>
+                    </Grid>
+                    <Button Name="bPrevOrder" Grid.Row="2" Content="&lt;" FontSize="25" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="bPrevOrder_Click"/>
+                    <Button Name="ButtonServiced" Grid.Row="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="ButtonServiced_Click">
+                        <TextBlock Text="SERVICED" TextAlignment="Center" FontSize="14" Width="10" TextWrapping="Wrap"/>
+                    </Button>
+                </Grid>
+            </Grid>
+        </Grid>
+        <Grid Grid.Column="1" Margin="10,0,0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid Name="UserInfo" Grid.Row="0" Grid.ColumnSpan="10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="44*"/>
+                    <ColumnDefinition Width="99*"/>
+                    <ColumnDefinition Width="45*"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Name="TermName" Text="Terminal" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20" Height="26"/>
+                <TextBlock Name="TermUser" Text="User" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20"/>
+                <TextBlock Name="TermConnection" Text="Connection" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20"/>
+            </Grid>
+            <Grid Grid.Row="1" Grid.ColumnSpan="10">
+                <ItemsControl Name="OptionalButtons">
+                    <ItemsControl.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <UniformGrid Columns="10"/>
+                        </ItemsPanelTemplate>
+                    </ItemsControl.ItemsPanel>
+                </ItemsControl>
+            </Grid>
+            <Grid Grid.Row="2" Grid.ColumnSpan="10">
+                <ItemsControl Name="CountButtons">
+                    <ItemsControl.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <UniformGrid Columns="10"/>
+                        </ItemsPanelTemplate>
+                    </ItemsControl.ItemsPanel>
+                    <ItemsControl.ItemContainerStyle>
+                        <Style>
+                            <Setter Property="Control.Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="Button">
+                                        <Grid>
+                                            <Rectangle Fill="White" RadiusX="15" RadiusY="15" x:Name="CountBtns">
+                                                <Rectangle.Effect>
+                                                    <DropShadowEffect Color="Black" BlurRadius="10" ShadowDepth="0"/>
+                                                </Rectangle.Effect>
+                                            </Rectangle>
+                                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                        </Grid>
+                                        <ControlTemplate.Triggers>
+                                            <Trigger Property="IsMouseOver" Value="True">
+                                                <Setter Property="Fill" Value="LightGray" TargetName="CountBtns"/>
+                                            </Trigger>
+                                            <Trigger Property="IsPressed" Value="True">
+                                                <Setter Property="Fill" Value="Gray" TargetName="CountBtns"/>
+                                            </Trigger>
+                                        </ControlTemplate.Triggers>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </ItemsControl.ItemContainerStyle>
+                    <Button Name="B0" Content="0" Margin="3" FontSize="35" FontWeight="Bold" Click="BCount_Click"/>
+                    <Button Name="B1" Content="1" Margin="3" FontSize="35" FontWeight="Bold" Click="BCount_Click"/>
+                    <Button Name="B2" Content="2" Margin="3" FontSize="35" FontWeight="Bold" Click="BCount_Click"/>
+                    <Button Name="B3" Content="3" Margin="3" FontSize="35" FontWeight="Bold" Click="BCount_Click"/>
+                    <Button Name="B4" Content="4" Margin="3" FontSize="35" FontWeight="Bold" Click="BCount_Click"/>
+                    <Button Name="B5" Content="5" Margin="3" FontSize="35" FontWeight="Bold" Click="BCount_Click"/>
+                    <Button Name="B6" Content="6" Margin="3" FontSize="35" FontWeight="Bold" Click="BCount_Click"/>
+                    <Button Name="B7" Content="7" Margin="3" FontSize="35" FontWeight="Bold" Click="BCount_Click"/>
+                    <Button Name="B8" Content="8" Margin="3" FontSize="35" FontWeight="Bold" Click="BCount_Click"/>
+                    <Button Name="B9" Content="9" Margin="3" FontSize="35" FontWeight="Bold" Click="BCount_Click"/>
+                </ItemsControl>
+            </Grid>
+            <Grid Grid.Row="3" Grid.ColumnSpan="9">
+                <ItemsControl Name="Buttons">
+                    <ItemsControl.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <UniformGrid Columns="9"/>
+                        </ItemsPanelTemplate>
+                    </ItemsControl.ItemsPanel>
+                    <ItemsControl.ItemContainerStyle>
+                        <Style>
+                            <Setter Property="Control.Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="Button">
+                                        <Grid>
+                                            <Ellipse Fill="DarkCyan" x:Name="MenuBtns">
+                                                <Ellipse.Effect>
+                                                    <DropShadowEffect Color="Black" BlurRadius="10" ShadowDepth="0"/>
+                                                </Ellipse.Effect>
+                                            </Ellipse>
+                                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                        </Grid>
+                                        <ControlTemplate.Triggers>
+                                            <Trigger Property="IsMouseOver" Value="True">
+                                                <Setter Property="Fill" Value="CadetBlue" TargetName="MenuBtns"/>
+                                            </Trigger>
+                                            <Trigger Property="IsPressed" Value="True">
+                                                <Setter Property="Fill" Value="DarkSlateGray " TargetName="MenuBtns"/>
+                                            </Trigger>
+                                        </ControlTemplate.Triggers>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </ItemsControl.ItemContainerStyle>
+                    <Button Name="MainButton" Foreground="White" FontSize="18" Margin="2" Click="MainButton_Click">
+                        <TextBlock Text="Main" TextWrapping="Wrap" TextAlignment="Center"/>
+                    </Button>
+                    <Button Name="DrinkButton" Foreground="White" FontSize="18" Margin="2" Click="DrinkButton_Click">
+                        <TextBlock Text="Drink" TextWrapping="Wrap" TextAlignment="Center"/>
+                    </Button>
+                    <Button Name="PotatoButton" Foreground="White" FontSize="18" Margin="2" Click="PotatoButton_Click">
+                        <TextBlock Text="Potato" TextWrapping="Wrap" TextAlignment="Center"/>
+                    </Button>
+                    <Button Name="HotDrinkButton" Foreground="White" FontSize="18" Margin="2" Click="HotDrinkButton_Click">
+                        <TextBlock Text="Hot Drink" TextWrapping="Wrap" TextAlignment="Center"/>
+                    </Button>
+                    <Button Name="DessertButton" Foreground="White" FontSize="18" Margin="2" Click="DessertButton_Click">
+                        <TextBlock Text="Dessert" TextWrapping="Wrap" TextAlignment="Center"/>
+                    </Button>
+                    <Button Name="IceCreamButton" Foreground="White" FontSize="18" Margin="2" Click="IceCreamButton_Click">
+                        <TextBlock Text="Ice Cream" TextWrapping="Wrap" TextAlignment="Center"/>
+                    </Button>
+                    <Button Name="SaladButton" Foreground="White" FontSize="18" Margin="2" Click="SaladButton_Click">
+                        <TextBlock Text="Salad" TextWrapping="Wrap" TextAlignment="Center"/>
+                    </Button>
+                    <Button Name="SauceButton" Foreground="White" FontSize="18" Margin="2" Click="SauceButton_Click">
+                        <TextBlock Text="Sauce" TextWrapping="Wrap" TextAlignment="Center"/>
+                    </Button>
+                </ItemsControl>
+            </Grid>
+            <Grid Name="MyGrid" Grid.Row="4" Grid.RowSpan="6" Grid.ColumnSpan="9" >
+                <ItemsControl Name="MainMenu">
+                    <ItemsControl.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <UniformGrid Rows="6" Columns="9"/>
+                        </ItemsPanelTemplate>
+                    </ItemsControl.ItemsPanel>
+                </ItemsControl>
+            </Grid>
+            <Grid Grid.Row="3" Grid.RowSpan="7" Grid.Column="10" >
+                <ItemsControl Name="SideBar">
+                    <ItemsControl.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <UniformGrid Rows="7"/>
+                        </ItemsPanelTemplate>
+                    </ItemsControl.ItemsPanel>
+                    <ItemsControl.ItemContainerStyle>
+                        <Style>
+                            <Setter Property="Control.Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="Button">
+                                        <Grid>
+                                            <Rectangle Fill="Black" RadiusX="15" RadiusY="15" x:Name="SideBarButtons">
+                                                <Rectangle.Effect>
+                                                    <DropShadowEffect Color="Black" BlurRadius="10" ShadowDepth="0"/>
+                                                </Rectangle.Effect>
+                                            </Rectangle>
+                                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                        </Grid>
+                                        <ControlTemplate.Triggers>
+                                            <Trigger Property="IsMouseOver" Value="True">
+                                                <Setter Property="Fill" Value="DimGray" TargetName="SideBarButtons"/>
+                                            </Trigger>
+                                            <Trigger Property="IsPressed" Value="True">
+                                                <Setter Property="Fill" Value="Gray" TargetName="SideBarButtons"/>
+                                            </Trigger>
+                                        </ControlTemplate.Triggers>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </ItemsControl.ItemContainerStyle>
+                    <Button Name="Promo" FontSize="16" Foreground="White" Margin="3" Click="Promo_Click">
+                        <TextBlock Text="Promo" TextWrapping="Wrap" TextAlignment="Center"/>
+                    </Button>
+                    <Button Name="Delete" FontSize="16" Foreground="White" Margin="3" Click="Delete_Click">
+                        <TextBlock Text="Delete" TextWrapping="Wrap" TextAlignment="Center"/>
+                    </Button>
+                    <Button Name="Clear" FontSize="16" Foreground="White" Margin="3" Click="Clear_Click">
+                        <TextBlock Text="Clear" TextWrapping="Wrap" TextAlignment="Center"/>
+                    </Button>
+                    <Button Name="MenuCrew" FontSize="16" Foreground="White" Margin="3" Click="MenuCrew_Click">
+                        <TextBlock Text="Menu Crew" TextWrapping="Wrap" TextAlignment="Center"/>
+                    </Button>
+                    <Button Name="MenuManage" FontSize="16" Foreground="White" Margin="3" Click="MenuManage_Click">
+                        <TextBlock Text="Manager Menu" TextWrapping="Wrap" TextAlignment="Center"/>
+                    </Button>
+                    <Button Name="Outside" FontSize="16" Foreground="White" Margin="3" Click="Outside_Click">
+                        <TextBlock Text="Out" TextWrapping="Wrap" TextAlignment="Center"/>
+                    </Button>
+                    <Button Name="Inside" FontSize="16" Foreground="White" Margin="3" Click="Inside_Click">
+                        <TextBlock Text="In" TextWrapping="Wrap" TextAlignment="Center"/>
+                    </Button>
+                </ItemsControl>
+            </Grid>
+            <Button Name="BlockWindow" Grid.Row="1" Grid.RowSpan="9" Grid.ColumnSpan="10" Content="BLOCKED" FontSize="90" Foreground="White" Background="DarkGray" Visibility="Hidden" Click="BlockWindow_Click"/>
+        </Grid>
+    </Grid>
+</Window>

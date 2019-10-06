@@ -1,0 +1,15 @@
+C:\Users\Masti\source\repos\Course Project .NET\Res_App\Res_Kitchen\Kitchen_Fries\bin\Debug\Kitchen_Fries.exe.config
+C:\Users\Masti\source\repos\Course Project .NET\Res_App\Res_Kitchen\Kitchen_Fries\bin\Debug\Kitchen_Fries.exe
+C:\Users\Masti\source\repos\Course Project .NET\Res_App\Res_Kitchen\Kitchen_Fries\bin\Debug\Kitchen_Fries.pdb
+C:\Users\Masti\source\repos\Course Project .NET\Res_App\Res_Kitchen\Kitchen_Fries\obj\Debug\MainWindow.g.cs
+C:\Users\Masti\source\repos\Course Project .NET\Res_App\Res_Kitchen\Kitchen_Fries\obj\Debug\App.g.cs
+C:\Users\Masti\source\repos\Course Project .NET\Res_App\Res_Kitchen\Kitchen_Fries\obj\Debug\Kitchen_Fries_MarkupCompile.cache
+C:\Users\Masti\source\repos\Course Project .NET\Res_App\Res_Kitchen\Kitchen_Fries\obj\Debug\Kitchen_Fries_MarkupCompile.lref
+C:\Users\Masti\source\repos\Course Project .NET\Res_App\Res_Kitchen\Kitchen_Fries\obj\Debug\MainWindow.baml
+C:\Users\Masti\source\repos\Course Project .NET\Res_App\Res_Kitchen\Kitchen_Fries\obj\Debug\Kitchen_Fries.g.resources
+C:\Users\Masti\source\repos\Course Project .NET\Res_App\Res_Kitchen\Kitchen_Fries\obj\Debug\Kitchen_Fries.Properties.Resources.resources
+C:\Users\Masti\source\repos\Course Project .NET\Res_App\Res_Kitchen\Kitchen_Fries\obj\Debug\Kitchen_Fries.csproj.GenerateResource.Cache
+C:\Users\Masti\source\repos\Course Project .NET\Res_App\Res_Kitchen\Kitchen_Fries\obj\Debug\Kitchen_Fries.csproj.CoreCompileInputs.cache
+C:\Users\Masti\source\repos\Course Project .NET\Res_App\Res_Kitchen\Kitchen_Fries\obj\Debug\Kitchen_Fries.exe
+C:\Users\Masti\source\repos\Course Project .NET\Res_App\Res_Kitchen\Kitchen_Fries\obj\Debug\Kitchen_Fries.pdb
+C:\Users\Masti\source\repos\Course Project .NET\Res_App\Res_Kitchen\Kitchen_Fries\obj\Debug\Kitchen_Fries.csprojResolveAssemblyReference.cache
